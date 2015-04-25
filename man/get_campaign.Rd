@@ -1,5 +1,6 @@
 \name{get_campaign}
 \alias{get_campaign}
+\alias{get_campaign_status}
 \title{get_campaign}
 \description{Get details or status of a campaign}
 \usage{

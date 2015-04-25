@@ -10,7 +10,7 @@ function(title,
          speed,
          zone = "int",
          countries,
-         category, # category ID
+         category,
          ttr,
          autorate,
          key = getOption("microworkers_key")) {
@@ -30,8 +30,7 @@ function(title,
     if(!autorate %in% c("NO", "V", "V+R"))
         stop("'autorate' must be one of 'NO', 'V', or 'V+R'")
     b$auto_rate <- autorate
-    
-    # zone
+    b$category <- category
     z <- c("asia1","caribbean1","europe1","europe2","west1","int")
     if(!zone %in% z) {
         stop("'zone' must be one of: ", paste0(z, collapse = ", "))
@@ -40,10 +39,9 @@ function(title,
         if(zone == "int" && !missing(countries))
             b$selected_countries <- paste0(countries, collapse = " ")
     }
-    
-    # category
-    
-    # proof_file
+    if(!proof_file %in% c(0,1,2))
+        stop("'proof_file' must be one of 0 (not required), 1 (optional), or 2 (required)")
+    b$proof_file <- proof_file
     
     # work_file
     
@@ -64,7 +62,7 @@ function(title,
          positions_per_worker,
          payment,
          hiregroup,
-         category, # category ID
+         category,
          ttr,
          autorate,
          key = getOption("microworkers_key")) {
@@ -82,10 +80,10 @@ function(title,
     if(!autorate %in% c("NO", "V", "V+R"))
         stop("'autorate' must be one of 'NO', 'V', or 'V+R'")
     b$auto_rate <- autorate
-    
-    # category
-    
-    # proof_file
+    b$category <- category
+    if(!proof_file %in% c(0,1,2))
+        stop("'proof_file' must be one of 0 (not required), 1 (optional), or 2 (required)")
+    b$proof_file <- proof_file
     
     # work_file
     
@@ -103,9 +101,9 @@ function(title,
 }
 
 zones <- function(type = "basic", key = getOption("microworkers_key")) {
-    mwGET(path = "/campaign_", .ctype(type), "/zones_list", key = key)
+    mwGET(path = paste0("/campaign_", .ctype(type), "/zones_list"), key = key)
 }
 
 categories <- function(type = "basic", key = getOption("microworkers_key")) {
-    mwGET(path = "/campaign_", .ctype(type), "/categories_list", key = key)
+    mwGET(path = paste0("/campaign_", .ctype(type), "/categories_list"), key = key)
 }

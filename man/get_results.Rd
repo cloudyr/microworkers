@@ -21,7 +21,6 @@ get_results(campaign, type = "basic", key = getOption("microworkers_key"))
 \code{\link{stop_campaign}}
 \code{\link{list_campaigns}}
 \code{\link{get_campaign}}
-\code{\link{get_campaign_status}}
 }
 \examples{
 \dontrun{

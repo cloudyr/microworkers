@@ -8,6 +8,7 @@ add_positions(campaign, positions, type = "basic", key = getOption("microworkers
 \arguments{
     \item{campaign}{A character string containing a campaign ID.}
     \item{positions}{An integer value specifying the number of positions to add to the campaign.}
+    \item{type}{A character string specifying the type of campaign. One of \dQuote{basic} (the default) or \dQuote{hiregroup}.}
     \item{key}{A character string containing a Microworkers.com API secret key.}
 }
 \details{Add positions to an existing campaign.}

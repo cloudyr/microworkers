@@ -26,7 +26,7 @@ library("microworkers")
 
 ## Setup ##
 
-To use Rmonkey, the user must have a Microworkers account, which automatically supplies an API access key. To use the API, however, you must contact [info@microworkers.com](mailto:info@microworkers.com) to gain API access.
+To use microworkers, the user must have a Microworkers account, which automatically supplies an API access key. To use the API, however, you must contact [info@microworkers.com](mailto:info@microworkers.com) to gain API access.
 
 Once everything is registered, your API key can be loaded into R using `options`:
 
@@ -38,7 +38,22 @@ options(microworkers_key = 'YourAPIKey')
 
 Below are some code examples showing how to use the package.
 
+### Create a Campaign ###
+
 Coming soon...
+
+### Modify a Campaign ###
+
+Coming soon...
+
+### Retrieve Tasks and Results ###
+
+Coming soon...
+
+### Approve or Reject Tasks ###
+
+Coming soon...
+
 
 
 [![cloudyr project logo](http://i.imgur.com/JHS98Y7.png)](https://github.com/cloudyr)

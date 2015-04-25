@@ -1,5 +1,6 @@
 \name{list_campaigns}
 \alias{list_campaigns}
+\alias{search_campaigns}
 \title{list_campaigns}
 \description{List or search available campaigns}
 \usage{

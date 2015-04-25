@@ -3,7 +3,7 @@
 \title{set_speed}
 \description{Set the speed of a basic campaign}
 \usage{
-set_speed(campaign, speed, type = "basic", key = getOption("microworkers_key"))
+set_speed(campaign, speed, key = getOption("microworkers_key"))
 }
 \arguments{
     \item{campaign}{A character string containing a campaign ID.}
