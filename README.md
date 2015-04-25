@@ -39,3 +39,6 @@ options(microworkers_key = 'YourAPIKey')
 Below are some code examples showing how to use the package.
 
 Coming soon...
+
+
+[![cloudyr project logo](http://i.imgur.com/JHS98Y7.png)](https://github.com/cloudyr)

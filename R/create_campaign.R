@@ -56,9 +56,9 @@ hiregroup_campaign <-
 function(title,
          work,
          work_file,
+         csv,
          proof,
          proof_file,
-         csv,
          duration,
          positions,
          positions_per_worker,
@@ -101,7 +101,6 @@ function(title,
            body = b,
            key = key)
 }
-
 
 zones <- function(type = "basic", key = getOption("microworkers_key")) {
     mwGET(path = "/campaign_", .ctype(type), "/zones_list", key = key)

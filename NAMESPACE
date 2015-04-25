@@ -1,8 +1,6 @@
 import("httr")
 import("jsonlite")
 
-export("get_task")
-export("get_proof")
 export("account_info")
 
 export("list_campaigns")
@@ -24,8 +22,10 @@ export("block_worker")
 export("stop_campaign")
 export("pause_campaign")
 export("resume_campaign")
-export("set_campaign_speed")
+export("set_speed")
 
+export("get_task")
+export("get_proof_file")
 export("approve_task")
 export("reject_task")
 export("submit_proof")

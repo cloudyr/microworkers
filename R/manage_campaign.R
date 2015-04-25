@@ -1,6 +1,6 @@
 add_positions <- function(campaign, positions, type = "basic", key = getOption("microworkers_key")) {
-    if(.ctype(type) == "hg")
-        stop("Cannot set speed of 'Hire Group'-type campaign")
+    if(positions < 1)
+        stop("'positions' must be a positive integer")
     mwPUT(path = paste0("/campaign_", .ctype(type), "/add_positions/", campaign, "?positions=", positions), key = key)
 }
 
@@ -22,8 +22,8 @@ resume_campaign <- function(campaign, type = "basic", key = getOption("microwork
     mwPUT(path = paste0("/campaign_", .ctype(type), "/resume/", campaign), key = key)
 }
 
-set_campaign_speed <- function(campaign, speed, type = "basic", key = getOption("microworkers_key")) {
-    if(.ctype(type) == "hg")
-        stop("Cannot set speed of 'Hire Group'-type campaign")
-    mwPUT(path = paste0("/campaign_", .ctype(type), "/resume/", campaign, "?speed=", speed), key = key)
+set_speed <- function(campaign, speed, key = getOption("microworkers_key")) {
+    if(!speed %in% 1:1000)
+        stop("'speed' must be in within 1 and 1000")
+    mwPUT(path = paste0("/campaign_b/set_speed/", campaign, "?speed=", speed), key = key)
 }
