@@ -1,0 +1,11 @@
+Package: microworkers
+Version: 0.1
+Date: 2015-04-25
+Title: Microworkers.com R Client
+Author: Thomas J. Leeper
+Maintainer: Thomas J. Leeper <thosjleeper@gmail.com>
+Imports: httr, jsonlite
+Description: Provides access to the Microworkers <https://microworkers.com/> crowdsourcing platform.
+License: GPL-2
+URL: https://github.com/leeper/microworkers
+BugReports: https://github.com/leeper/microworkers/issues
