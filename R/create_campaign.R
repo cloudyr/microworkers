@@ -101,9 +101,9 @@ function(title,
 }
 
 zones <- function(type = "basic", key = getOption("microworkers_key")) {
-    mwGET(path = paste0("/campaign_", .ctype(type), "/zones_list"), key = key)
+    mwGET(path = paste0("/campaign_", .ctype(type), "/zones_list"), key = key)$zones
 }
 
 categories <- function(type = "basic", key = getOption("microworkers_key")) {
-    mwGET(path = paste0("/campaign_", .ctype(type), "/categories_list"), key = key)
+    mwGET(path = paste0("/campaign_", .ctype(type), "/categories_list"), key = key)$parent_categories
 }

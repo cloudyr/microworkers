@@ -5,7 +5,7 @@
 }
 
 list_campaigns <- function(type = "basic", key = getOption("microworkers_key")) {
-    mwGET(path = paste0("/campaign_", .ctype(type), "/list"), key = key)
+    mwGET(path = paste0("/campaigns_", .ctype(type), "/list"), key = key)
 }
 
 search_campaigns <- 
@@ -57,7 +57,7 @@ function(status,
         a$finished_to <- finished_to
     }
     b <- paste0("?", paste0(names(a), "=", unname(unlist(a)), collapse = "&"))
-    mwGET(path = paste0("/campaign_", .ctype(type), "/list_extend", b), key = key)
+    mwGET(path = paste0("/campaigns_", .ctype(type), "/list_extend", b), key = key)
 }
 
 get_campaign <- function(campaign, type = "basic", key = getOption("microworkers_key")) {
