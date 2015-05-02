@@ -7,12 +7,12 @@ function(title,
          duration,
          positions,
          payment,
+         autorate,
          speed,
          zone = "int",
          countries,
          category,
          ttr,
-         autorate,
          key = getOption("microworkers_key")) {
     b <- list()
     b$title <- title
@@ -61,10 +61,10 @@ function(title,
          positions,
          positions_per_worker,
          payment,
+         autorate,
          hiregroup,
          category,
          ttr,
-         autorate,
          key = getOption("microworkers_key")) {
     b <- list()
     b$title <- title
