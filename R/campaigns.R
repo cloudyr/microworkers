@@ -61,13 +61,20 @@ function(status,
 }
 
 get_campaign <- function(campaign, type = "basic", key = getOption("microworkers_key")) {
+    if(inherits(campaign, "mw_campaign"))
+        campaign <- campaign$campaign_id
     mwGET(path = paste0("/campaign_", .ctype(type), "/get_info/", campaign), key = key)
 }
 
 get_campaign_status <- function(campaign, type = "basic", key = getOption("microworkers_key")) {
+    if(inherits(campaign, "mw_campaign"))
+        campaign <- campaign$campaign_id
     mwGET(path = paste0("/campaign_", .ctype(type), "/get_status/", campaign), key = key)
 }
 
 get_results <- function(campaign, type = "basic", key = getOption("microworkers_key")) {
-    mwGET(path = paste0("/campaign_", .ctype(type), "/results_csv/", campaign), key = key)
+    if(inherits(campaign, "mw_campaign"))
+        campaign <- campaign$campaign_id
+    g <- mwGET(path = paste0("/campaign_", .ctype(type), "/results_csv/", campaign), key = key)
+    read.csv(g$csv, stringsAsFactors = FALSE)
 }

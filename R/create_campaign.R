@@ -44,10 +44,13 @@ function(title,
     b$proof_file <- proof_file
     
     # work_file
+    if(!missing(work_file))
+        b$file <- readBin(work_file, what = "raw")
     
-    mwPOST(path = "/campaign_b/new_campaign/", 
-           body = b,
-           key = key)
+    g <- mwPOST(path = "/campaign_b/new_campaign/", 
+                body = b,
+                key = key)
+    structure(g, class = "mw_campaign", "campaign_type" = "Basic")
 }
 
 hiregroup_campaign <- 
@@ -86,18 +89,20 @@ function(title,
     b$proof_file <- proof_file
     
     # work_file
-    
+    if(!missing(work_file))
+        b$file <- readBin(work_file, what = "raw")
     # csv
     if(missing(csv)){
         b$description_type  <- "SAME"
     } else {
         b$description_type  <- "UNIQUE"
-#        b$csv <- 
+        b$csv <- readBin(csv, what = "character")
     }
     
-    mwPOST(path = "/campaign_hg/new_campaign/", 
-           body = b,
-           key = key)
+    g <- mwPOST(path = "/campaign_hg/new_campaign/", 
+                body = b,
+                key = key)
+    structure(g, class = "mw_campaign", "campaign_type" = "HireGoup")
 }
 
 zones <- function(type = "basic", key = getOption("microworkers_key")) {

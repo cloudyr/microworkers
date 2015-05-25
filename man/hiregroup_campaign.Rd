@@ -12,7 +12,7 @@ hiregroup_campaign(title, work, work_file, csv, proof, proof_file,
     \item{title}{A character string containing the title of the campaign.}
     \item{work}{A character string containing the details of the campaign task. This is a plain text document that can accommodate newline \code{\\n} characters, but no styling. If \code{autorate} is set to \dQuote{V} or \dQuote{V+R}, see Note about how to include an appropriate URL template for workers to retrieve their VCODE.}
     \item{work_file}{}
-    \item{csv}{}
+    \item{csv}{An optional CSV file of the format described at \url{https://microworkers.com/csv.php}. This can be used to specify a distinct values each variables in a template supplied to the \code{work} text. If missing, each worker receives the same task description.}
     \item{proof}{A character string describing the proof that each worker must submit after they have completed the assigned task. This is a plain text document that can accommodate newline \code{\\n} characters, but no styling.}
     \item{proof_file}{An integer value indicating whether the worker must upload a file as proof. Must be one of 0 (not required), 1 (optional), or 2 (required).}
     \item{duration}{A positive integer value indicating the length of time required to complete the task, in minutes.}
