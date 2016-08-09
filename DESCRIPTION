@@ -1,11 +1,11 @@
 Package: microworkers
-Version: 0.1
-Date: 2015-05-25
+Version: 0.1.1
+Date: 2016-08-09
 Title: Microworkers.com R Client
-Author: Thomas J. Leeper
-Maintainer: Thomas J. Leeper <thosjleeper@gmail.com>
+Authors@R: c(person("Thomas J.", "Leeper", role = c("aut", "cre"),
+             email = "thosjleeper@gmail.com"))
 Imports: httr, jsonlite
 Description: Client for the Microworkers <https://microworkers.com/> crowdsourcing platform.
 License: GPL-2
-URL: https://github.com/leeper/microworkers
-BugReports: https://github.com/leeper/microworkers/issues
+URL: https://github.com/cloudyr/microworkers
+BugReports: https://github.com/cloudyr/microworkers/issues

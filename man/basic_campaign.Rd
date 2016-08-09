@@ -11,7 +11,7 @@ basic_campaign(title, work, work_file, proof, proof_file,
 \arguments{
     \item{title}{A character string containing the title of the campaign.}
     \item{work}{A character string containing the details of the campaign task. This is a plain text document that can accommodate newline \code{\\n} characters, but no styling. If \code{autorate} is set to \dQuote{V} or \dQuote{V+R}, see Note about how to include an appropriate URL template for workers to retrieve their VCODE.}
-    \item{work_file}{}
+    \item{work_file}{Optionally, a file to display a description of the worker to the worker.}
     \item{proof}{A character string describing the proof that each worker must submit after they have completed the assigned task. This is a plain text document that can accommodate newline \code{\\n} characters, but no styling.}
     \item{proof_file}{An integer value indicating whether the worker must upload a file as proof. Must be one of 0 (not required), 1 (optional), or 2 (required).}
     \item{duration}{A positive integer value indicating the length of time required to complete the task, in minutes.}

@@ -2,3 +2,6 @@
 inst/figure
 README.Rmd
 README.html
+CONTRIBUTING.md
+^.*\.Rproj$
+^\.Rproj\.user$
